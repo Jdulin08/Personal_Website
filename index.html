@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>This is my Personal Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <div class="background">
+
+    <div class="nav">
+      <a class="a active" href="#">Home</a>
+      <a class="b" href="#">About Me</a>
+      <a class="c" href="#">Resume</a>
+      <a class="d" href="#">Contact</a>
+    </div>
+
+    <div class="content">
+      <div class="home">
+        <h1>I am Jason Dulin</h1>
+        <h3>Full-Stack Software Developer</h3>
+      </div>
+      <div class="aboutus">
+        <p><b>Hello Friends,</b><br>
+        My name is Jason Dulin and I am a Full-Stack Software Engineer.<br>
+        I have a background in Molecular Science, Bioinformatics, and Software Engineering. As I have continued my education, I have transitioned from a scientific/analytics background more towards web/software development.<br>
+        You can find my Resume, github link, and contact information on other tabs of my website!</p>
+        <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+      </div>
+      <div class="gallery">
+        <div class="image">
+          <img src="images/1.jpg" />
+        </div>
+      </div>
+      <div class="contactus">
+        <div class="contactform">
+          <form action="index.html" method="post">
+            <input type="text" name="" class="inputtext" value="First Name">
+            <input type="text" name="" class="inputtext" value="Last Name">
+            <input type="text" name="" class="inputtext" value="Email">
+            <textarea rows="6" cols="4" class="inputmessage">Your messages!</textarea>
+            <input type="button" name="" class="submitbutton" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+        $('a').click(function(){
+          var selected = $(this);
+          $('a').removeClass('active');
+          $(selected).addClass('active');
+        });
+
+        var $a = $('.a'),
+        $b = $('.b'),
+        $c = $('.c'),
+        $d = $('.d')
+        $home = $('.home'),
+        $aboutus = $('.aboutus'),
+        $gallery = $('.gallery'),
+        $contactus = $('.contactus');
+
+        $a.click(function(){
+          $home.fadeIn();
+          $aboutus.fadeOut();
+          $gallery.fadeOut();
+          $contactus.fadeOut();
+        });
+        $b.click(function(){
+          $aboutus.fadeIn();
+          $home.fadeOut();
+          $gallery.fadeOut();
+          $contactus.fadeOut();
+        });
+        $c.click(function(){
+          $gallery.fadeIn();
+          $aboutus.fadeOut();
+          $home.fadeOut();
+          $contactus.fadeOut();
+        });
+        $d.click(function(){
+          $contactus.fadeIn();
+          $gallery.fadeOut();
+          $aboutus.fadeOut();
+          $home.fadeOut();
+        });
+      });
+
+    </script>
+
+  </body>
+</html>
